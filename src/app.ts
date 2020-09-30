@@ -1,7 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 
-import morganDevColor from '../src/middlewares/log';
+import morganDevColor from './middlewares/log';
 
 // import errorCustom from './app/middlewares/errorCustom';
 // import routesSession from './routes/routesSession';
