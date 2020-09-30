@@ -13,8 +13,7 @@ function middlewares() {
 }
 
 function routes() {
-  app.use('/images', express.static(path.resolve(__dirname, 'images')));
-  console.log(path.resolve(__dirname, 'images'));
+  app.use('/images', express.static(path.resolve(__dirname, 'images')))
 }
 
 middlewares();
