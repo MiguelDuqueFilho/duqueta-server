@@ -1,6 +1,7 @@
 import express from 'express';
 import path from 'path';
 import cors from 'cors';
+import OrphanagesController from './controllers/ImagesController';
 
 import morganDevColor from './middlewares/log';
 
@@ -13,7 +14,8 @@ function middlewares() {
 }
 
 function routes() {
-  app.use('/images', express.static(path.resolve(__dirname, 'images')))
+  app.use('/images', express.static(path.resolve(__dirname, 'images')));
+  app.post('/api/images/:id', OrphanagesController.update);
 }
 
 middlewares();
